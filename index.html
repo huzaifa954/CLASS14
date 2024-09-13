@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function  oniputchange(events) {
+            var inputs=document.getElementsByTagName('input')
+            for( i = 0; i < inputs.length; i++) {
+                var text = inputs[i];
+                console.log(text.value)
+                
+            }
+            
+         }
+         function getvalues(events) {
+            // console.log(getvalues)
+            var inputs=document.getElementsByTagName('input')
+            for (let i = 0; i < inputs.length; i++) {
+                var text= inputs[i];
+                console.log(text.value)
+            }
+            
+         }
+         var da=new Date()
+         console.log(da)
+
+
+         // var inputs=document.getElementsByTagName('input')
+        // console.log(inputs)
+        // var inputs=inputs[0]
+        // inputs.value=("enter your name")
+   </script>
+    <style>
+        .body{
+            margin: 0;
+            padding: 0;
+        }
+        .d{
+            margin: 0;
+            padding: 250px 40%;
+        }
+        .text{
+        box-shadow: 2px 3px 5px grey;
+            padding:0px 15px;
+            height: 30px;
+            width: 250px;
+        }
+        .email{
+            height: 30px;
+            width: 250px;
+            padding:0px 15px;
+        }
+        .password{
+            padding:0px 15px;
+            height: 30px;
+            width: 250px;
+        }
+        .number{
+            height: 30px;
+            width: 250px;
+            padding:0px 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="h1">log in</div>
+ <div class="d">
+
+     <input type="text"class="text" required onchange="oniputchange()"><br>
+     <input type="email"class="email" requiredonclick="getvalues()"><br>
+     <input type="password"class="password"onclick="getvalues()" required><br>
+     <input type="number"class="number"onclick="getvalues()" required><br>
+     <button type="submit" class="submit" onclick="getvalues()">log in</button>
+     <script src="app.js"></script>
+     </div>
+</body>
+
+</html>
